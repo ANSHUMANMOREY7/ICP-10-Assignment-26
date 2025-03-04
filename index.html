@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dynamic cards</title>
 </head>
 <style>
-  .card{
-    border: 1px solid grey;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 28px;
-    text-align: center;
-    margin: 10px;
-    box-shadow: 5px 5px 5px gray;
-  }
-  .heading{
-    text-align: center;
-    font-size: 60px;
-  }
+    .card {
+        border: 1px solid grey;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 28px;
+        text-align: center;
+        margin: 10px;
+        box-shadow: 5px 5px 5px gray;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 60px;
+    }
 </style>
+
 <body>
 
-    <div class="stud-container">
+    <div id="stud-container">
         <h1 class="heading">STUDENT CARDS</h1>
-       <div class="card">anshuman</div>
+        <div class="card">anshuman</div>
     </div>
     <script>
         const stud =
-        [
-           "anshuman",
-           "yash",
-           "aniket",
-           "aman",
-           "ayush"
-        ]
-        
+            [
+                
+                "yash",
+                "aniket",
+                "aman",
+                "ayush"
+            ]
+
+        const ElementContainer = document.getElementById('stud-container')
+        for (i = 0; i < stud.length; i++) {
+            ElementContainer.innerHTML += `<div class="card">${stud[i]}</div>`
+        }
     </script>
 </body>
+
 </html>
