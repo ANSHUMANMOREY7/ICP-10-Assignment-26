@@ -7,6 +7,9 @@
     <title>dynamic cards</title>
 </head>
 <style>
+    .color{
+        background-color: red;
+    }
     .card {
         border: 1px solid grey;
         padding: 10px;
@@ -24,15 +27,17 @@
 </style>
 
 <body>
-
+    <div class="color"></div>
     <div id="stud-container">
         <h1 class="heading">STUDENT CARDS</h1>
-        <div class="card">anshuman</div>
+        <!-- <div class="card">
+
+        </div> -->
     </div>
     <script>
         const stud =
             [
-                
+                "anshuman",
                 "yash",
                 "aniket",
                 "aman",
@@ -40,8 +45,9 @@
             ]
 
         const ElementContainer = document.getElementById('stud-container')
+        const ElementColor = document.getElementById('color')
         for (i = 0; i < stud.length; i++) {
-            ElementContainer.innerHTML += `<div class="card">${stud[i]}</div>`
+            ElementContainer.innerHTML += `<div class="card">${stud[i].toUpperCase()}</div>`
         }
     </script>
 </body>
